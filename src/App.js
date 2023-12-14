@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import "./App.css";
+
+import Button from "./components/Button/index";
+import State from "./components/State";
 
 function App() {
+  const [count, setCount] = useState(5);
+
+  const onChangeCount = () => {
+    setCount(count + 5);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>đếm {count}</h1>
+
+      <button onClick={onChangeCount}> tang</button>
+
+      <Button />
+      <State />
+    </>
   );
 }
 
