@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import './index.css';
+import "./index.css";
 
-const contentDefault = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+const contentDefault =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-function  OpenAtATime(props) {
+function OpenAtATime(props) {
   const [tab1, setTab1] = useState(false);
   const [tab2, setTab2] = useState(false);
   const [tab3, setTab3] = useState(false);
@@ -28,7 +29,7 @@ function  OpenAtATime(props) {
   };
 
   return (
-    <div className='tab'>
+    <div className="tab">
       <TabItem
         title="Simple 1"
         content={contentDefault}
@@ -50,7 +51,6 @@ function  OpenAtATime(props) {
         isActive={tab3}
         onClick={onClickTab3}
       />
-
     </div>
   );
 }
@@ -60,12 +60,11 @@ export default OpenAtATime;
 const TabItem = ({ title, content, isActive, onClick }) => {
   return (
     <div className="tab__item" onClick={onClick}>
+      <div className={`tab__title ${isActive ? "tab__title--active" : ""}`}>
+        {title}
+      </div>
 
-    <div className={`tab__title ${isActive ? 'tab__title--active' : ''}`}>{title}</div>
-
-    {
-      isActive && <div className="tab__content">{content}</div>
-    }
-  </div>
-  )
-}
+      {isActive && <div className="tab__content">{content}</div>}
+    </div>
+  );
+};

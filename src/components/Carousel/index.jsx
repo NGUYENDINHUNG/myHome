@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import Button from '../buttonGroup';
 
 function ImageSlider(props) {
   const { imageList } = props;
@@ -68,8 +68,14 @@ function ImageSlider(props) {
   );
 }
 
-ImageSlider.propTypes = {
+ ImageSlider.propTypes = {
   imageList: PropTypes.arrayOf(String).isRequired,
 };
 
 export default ImageSlider;
+
+
+
+
+
+
