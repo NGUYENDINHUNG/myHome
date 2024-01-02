@@ -18,6 +18,8 @@ function Images(props) {
   const [index, setIndex] = useState(0);
   const [autoMode, setAutoMode] = useState(false);
 
+
+
   useEffect(() => {
     let intervalId;
 
@@ -26,7 +28,6 @@ function Images(props) {
         onNextImage();
       }, 3000);
 
-      
       return () => clearInterval(intervalId);
     }
   }, [index, autoMode]);
@@ -48,7 +49,6 @@ function Images(props) {
   };
 
   const toggleAutoMode = () => {
-    // Hàm bật/tắt chế độ tự động chuyển ảnh
     setAutoMode(!autoMode);
     console.log("««««« autoMode »»»»»", autoMode);
   };
@@ -111,3 +111,5 @@ function Images(props) {
 }
 
 export default Images;
+
+

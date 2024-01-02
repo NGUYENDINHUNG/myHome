@@ -5,7 +5,12 @@ import "./App.css";
 // import Button from "./components/Button/index";
 // import State from "./components/State";
 
-import  ImageSlider from './components/Carousel/index'
+// import  ImageSlider from './components/Carousel/index';
+
+// import FormBasic from "./components/From/form1";
+// import FormLogin from "./components/From/FormLogin";
+import FormLogin2 from "./components/From/FormLogin2";
+import Post from "./components/Post";
 
 function App() {
   // const [count, setCount] = useState(5);
@@ -22,8 +27,12 @@ function App() {
 
       {/* <Button />
       <State /> */}
-  < ImageSlider/>
-     
+  {/* < ImageSlider/> */}
+      {/* <FormBasic/>
+      */}
+      {/* <FormLogin/> */}
+      {/* <FormLogin2/> */}
+      <Post/>
     </>
   );
 }
